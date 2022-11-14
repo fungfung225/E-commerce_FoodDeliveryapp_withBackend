@@ -1,35 +1,46 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fooddelivery_backend/controller/recommended_product_controller.dart';
+import 'package:fooddelivery_backend/routes/route_helper.dart';
 import 'package:fooddelivery_backend/widgets/app_icon.dart';
 import 'package:fooddelivery_backend/widgets/big_text.dart';
 import 'package:fooddelivery_backend/widgets/expandable_text_widget.dart';
-
+import 'package:fooddelivery_backend/utils/app_constants.dart';
+import 'package:get/get.dart';
 import '../../utils/colors.dart';
 import '../../utils/dimensions.dart';
 
 
 class RecommendFoodDetail extends StatelessWidget {
-  const RecommendFoodDetail({Key? key}) : super(key: key);
+  final int pageId;
+  const RecommendFoodDetail({Key? key, required this.pageId}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var product = Get.find<RecommendedProductController>().recommendedProductList[pageId];
     return Scaffold(
       backgroundColor: Colors.white,
       body:CustomScrollView(
         slivers: [
           SliverAppBar(
+            automaticallyImplyLeading: false, //cancel the back button
             toolbarHeight: 70,
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                AppIcon(icon: Icons.clear),
+                GestureDetector(
+                  onTap: (){
+                    Get.toNamed(RouteHelper.getInitial());
+                  },
+                  child: AppIcon(icon: Icons.clear),
+                ),
                 AppIcon(icon: Icons.shopping_cart_outlined)
               ],
             ),
             bottom: PreferredSize(
               preferredSize: Size.fromHeight(20),
               child: Container(
-                child: Center(child: BigText(size: Dimensions.font26,text: "Chinese Side",)),
+                child: Center(child: BigText(size: Dimensions.font26,text: product.name!,)),
                 width: double.maxFinite,
                 padding: EdgeInsets.only(top: 5,bottom: 10),
                 decoration: BoxDecoration(
@@ -46,8 +57,8 @@ class RecommendFoodDetail extends StatelessWidget {
             backgroundColor: AppColors.yellowColor,
             expandedHeight: 300,
             flexibleSpace: FlexibleSpaceBar(
-              background: Image.asset(
-                "assets/image/food0.png",
+              background: Image.network(
+                AppConstants.BASE_URL+AppConstants.UPLOAD_URL+product.img!,
                 width: double.maxFinite,
                 fit: BoxFit.cover,
               ),
@@ -57,8 +68,7 @@ class RecommendFoodDetail extends StatelessWidget {
             child:Column(
               children: [
                 Container(
-                  child: ExpandableTextWidget(text:
-                  "Chinken marinateh frinsh conraianderfrinsconraianderfrins, fresh conraiander ChChinken marinateh frins, fresh  Chinken marinatehconraianderfrins, fresh conraiander ChChinken marinateh frins, fresh  Chinken marinatehconraianderfrins, fresh conraiander ChChinken marinateh frins, fresh  Chinken marinatehconraianderfrins, fresh conraiander ChChconraianderfrins, fresh conraiander ChChinken marinateh frins, fresh  Chinken marinatehconraianderfrins, fresh conraiander ChChinken marinateh frins, fresh  Chinken marinatehinken marinateh frins, fresh  Chinken marinateh, fresh conraiander ChChinken marinateh frins, fresh  Chinken marinateh frins, fresh conraiander Chinken marinateh frins, ffrins, fresh conraiander ChChinken marinateh frins, fresh  Chinken marinateh frins, fresh conraiander Chinken marinateh frins, fresh conraiander Cher Chfrins, fresh conraiander ChChinken marinateh frins, fresh  Chinken marinateh frins, fresh conraiander Chinken marinateh frins, fresh conraiander Cher Chfrins, fresh conraiander ChChinken marinateh frins, fresh  Chinken marinateh frins, fresh conraiander Chinken marinateh frins, fresh conraiander Cher Chfrins, fresh conraiander ChChinken marinateh frins, fresh  Chinken marinateh frins, fresh conraiander Chinken marinateh frins, fresh conraiander Cher Chfrins, fresh conraiander ChChinken marinateh frins, fresh  Chinken marinateh frins, fresh conraiander Chinken marinateh frins, fresh conraiander Cher Chfrins, fresh conraiander ChChinken marinateh frins, fresh  Chinken marinateh frins, fresh conraiander Chinken marinateh frins, fresh conraiander Cher Chfrins, fresh conraiander ChChinken marinateh frins, fresh  Chinken marinateh frins, fresh conraiander Chinken marinateh frins, fresh conraiander Cher Chfrins, fresh conraiander ChChinken marinateh frins, fresh  Chinken marinateh frins, fresh conraiander Chinken marinateh frins, fresh conraiander Cher Chfrins, fresh conraiander ChChinken marinateh frins, fresh  Chinken marinateh frins, fresh conraiander Chinken marinateh frins, fresh conraiander Cher Chfrins, fresh conraiander ChChinken marinateh frins, fresh  Chinken marinateh frins, fresh conraiander Chinken marinateh frins, fresh conraiander Cher Chfrins, fresh conraiander ChChinken marinateh frins, fresh  Chinken marinateh frins, fresh conraiander Chinken marinateh frins, fresh conraiander Cher Chfrins, fresh conraiander ChChinken marinateh frins, fresh  Chinken marinateh frins, fresh conraiander Chinken marinateh frins, fresh conraianderfrins, fresh conraiander ChChinken marinateh frins, fresh  Chinken marinateh frins, fresh conraiander Chinken marinateh frins, fresh conraiander Cher Chfrins, fresh conraiander ChChinken marinateh frins, fresh  Chinken marinateh frins, fresh conraiander Chinken marinfrins, fresh conraiander ChChinken marinateh frins, fresh  Chinken marinateh frins, fresh conraiander Chinken marinateh frins, fresh conraiander Cher Chfrins, fresh conraiander ChChinken marinateh frins, fresh  Chinken marinateh frins, fresh conraiander Chinken marinateh frins, fresh conraiander Cher Chateh frins, fresh conraiander Cher Ch Cher Chresh conraiander Cher Ch Cher Ch"),
+                  child: ExpandableTextWidget(text: product.description!),
                   margin: EdgeInsets.only(left: Dimensions.width20,right: Dimensions.width20),
                 )
               ],
@@ -75,7 +85,7 @@ class RecommendFoodDetail extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 AppIcon(iconSize: Dimensions.iconSize24, iconColor: Colors.white, backgroundColor:AppColors.mainColor ,icon: Icons.remove),
-                BigText(text: "\$12.88"+"X"+"0", color: AppColors.mainColor,size: Dimensions.font26,),
+                BigText(text: "\$ ${product.price!} X 0", color: AppColors.mainColor,size: Dimensions.font26,),
                 AppIcon(iconSize: Dimensions.iconSize24, iconColor: Colors.white, backgroundColor:AppColors.mainColor ,icon: Icons.add)
               ],
             ),
@@ -107,7 +117,7 @@ class RecommendFoodDetail extends StatelessWidget {
                 ),
                 Container(
                   padding: EdgeInsets.only(top: Dimensions.height20,bottom: Dimensions.height20,left: Dimensions.width20,right: Dimensions.width20),
-                  child: BigText(text: "\$10 | Add to cart",color: Colors.white,),
+                  child: BigText(text: "\$ ${product.price!} | Add to cart",color: Colors.white,),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(Dimensions.radius20),
                       color: AppColors.mainColor
