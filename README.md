@@ -15,7 +15,9 @@ Major features
 8. Zone based order
 9. User Authentication
 10. Firebase notification
-11. Payment (Paypal)
 12. Create new products on the backend
 13. See order details
 14. Update order status
+
+
+##Part 1
