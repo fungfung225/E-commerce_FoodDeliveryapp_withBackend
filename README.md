@@ -31,5 +31,4 @@ Getx is a great package for managing your app states, routes and http client. It
 We used Getx for products display, maintaining the state of the shopping cart, profile page, google map and many other features of this e-commerce app or shopping app.
 
 ## Backend
-
-We have used Laravel for building the backend of this app. We used the same framework for building Restful Api for the app. Laravel is the most popular web application framework both for backend and api building. Backend shows users' orders, total orders, users' info, payment info etc.
+Not yet done
