@@ -13,10 +13,18 @@ E-commerce or shopping app includes the features
 .
 .
 .
+![HomePage](https://user-images.githubusercontent.com/90837134/203028203-02544ea7-8dc5-4877-99b9-75c073adc5e1.png)
+
+![Popular food](https://user-images.githubusercontent.com/90837134/203028352-b9237b54-db7f-47af-af0f-e3a605a27017.png)
+
+![Recommended food](https://user-images.githubusercontent.com/90837134/203028366-a3b27c45-f083-45d2-81ec-9173f76197e2.png)
+![shop cart](https://user-images.githubusercontent.com/90837134/203028451-9c54d5db-0908-49ce-9974-19dcb50d1dd5.png)
+
+![history page](https://user-images.githubusercontent.com/90837134/203028461-50d1c92e-9a59-4806-ba51-f903ce5fac1e.png)
 
 
+## Part 1!
 
-## Part 1
 API Client, Repository and Controllers
 Build models, classes working with JSON, Map and List
 Build product controller, cart controller and data processing
