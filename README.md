@@ -6,21 +6,30 @@ This is a shopping app with Laravel backend and Laravel admin panel
 
 E-commerce or shopping app includes the features
 
-.
-.
-.
-.
-.
-.
-.
-![HomePage](https://user-images.githubusercontent.com/90837134/203028203-02544ea7-8dc5-4877-99b9-75c073adc5e1.png)
+### Home Page
 
-![Popular food](https://user-images.githubusercontent.com/90837134/203028352-b9237b54-db7f-47af-af0f-e3a605a27017.png)
+The home page displays food categories. You can click it and go to a new page to view the food and add to cart.
 
-![Recommended food](https://user-images.githubusercontent.com/90837134/203028366-a3b27c45-f083-45d2-81ec-9173f76197e2.png)
-![shop cart](https://user-images.githubusercontent.com/90837134/203028451-9c54d5db-0908-49ce-9974-19dcb50d1dd5.png)
+![homepage](https://user-images.githubusercontent.com/90837134/203029696-c21c834d-9667-4088-bea3-0f03ce7d95dd.png)
 
-![history page](https://user-images.githubusercontent.com/90837134/203028461-50d1c92e-9a59-4806-ba51-f903ce5fac1e.png)
+### Recommended Food Page
+
+This page is from the home page where you can add items to your cart. Introductory text about food is collapsible. It also displays product prices. You can add items to your cart.
+
+![recommended](https://user-images.githubusercontent.com/90837134/203030220-89f78c03-8574-471e-b937-6663653fe4fa.png)
+
+### Popular Food Page
+
+This page is from the home page where you can add items to your cart. Text about food is collapsible. It also displays product prices. You can add items to your cart.
+
+![popular](https://user-images.githubusercontent.com/90837134/203030298-0c389ba1-85fb-4ed9-bfbf-64c30770d221.png)
+
+Place order on this page. You can also add or remove items from your shopping cart. You'll also see changes to the total price as you add or remove. This page is dynamic as it removes and adds items as the user clicks.
+
+### Cart Page
+![shopcart](https://user-images.githubusercontent.com/90837134/203030755-3285b3a6-d472-489c-9b14-e5eec2639f8b.png)
+
+Place order on this page. You can also add or remove items from your shopping cart. You'll also see changes to the total price as you add or remove. This page is dynamic as it removes and adds items as the user clicks.
 
 
 ## Part 1!
