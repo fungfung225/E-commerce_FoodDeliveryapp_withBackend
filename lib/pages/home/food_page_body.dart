@@ -36,7 +36,6 @@ class _FoodPageBodyState extends State<FoodPageBody> {
     pageController.addListener(() {
       setState(() {
         _currPageValue = pageController.page!;
-
       });
     });
   }
@@ -56,7 +55,6 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           return popularProducts.isLoaded?Container(
             // color:Colors.redAccent,
             height: Dimensions.pageView,
-
               child: PageView.builder(
                   controller: pageController,
                   itemCount: popularProducts.popularProductList.length,

@@ -25,6 +25,7 @@ class PopularFoodDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //get access to list
     var product = Get.find<PopularProductController>().popularProductList[pageId];
     Get.find<PopularProductController>().initProduct(product, Get.find<CartController>());
     //print("page is id  "+ pageId.toString());
