@@ -4,6 +4,7 @@ import 'package:fooddelivery_backend/base/custom_loader.dart';
 import 'package:fooddelivery_backend/base/show_custom_snackbar.dart';
 import 'package:fooddelivery_backend/controller/auth_controller.dart';
 import 'package:fooddelivery_backend/models/signup_body.dart';
+import 'package:fooddelivery_backend/routes/route_helper.dart';
 import 'package:fooddelivery_backend/widgets/app_text_field.dart';
 import 'package:fooddelivery_backend/widgets/big_text.dart';
 import '../../utils/colors.dart';
@@ -55,9 +56,11 @@ class SignUpPage extends StatelessWidget {
           phone: phone,
           email: email,
           password: password);
+      /* call the method in auth repo and go to Api client and then talk to the server to get response */
           authController.registration(signUpBody).then((status){
             if(status.isSuccess){
               print("Success registration");
+              Get.offNamed(RouteHelper.getInitial());
             }else{
               showCustomSnackBar(status.message);
             }

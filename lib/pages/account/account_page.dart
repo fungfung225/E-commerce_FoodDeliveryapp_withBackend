@@ -19,6 +19,7 @@ class AccountPage extends StatelessWidget {
     bool _userLoggedIn = Get.find<AuthController>().userLoggedIn();
     if (_userLoggedIn){
       Get.find<UserController>().getUserInfo();
+
     }
     return Scaffold(
       appBar: AppBar(
@@ -30,7 +31,8 @@ class AccountPage extends StatelessWidget {
         ),
       ),
       body: GetBuilder<UserController>(builder: (userController){
-        return Container(
+        return _userLoggedIn?
+        (userController.isLoading?Container(
           width: double.maxFinite,
           margin:EdgeInsets.only(top: Dimensions.height20),
 
@@ -54,7 +56,7 @@ class AccountPage extends StatelessWidget {
                             iconColor: Colors.white,
                             iconSize: Dimensions.height10*5/2,
                             size: Dimensions.height10*5,),
-                          bigText: BigText(text: "Ahmed")),
+                          bigText: BigText(text: userController.userModel.name)),
                       SizedBox(height: Dimensions.height20,),
                       //phone
                       AccountWidget(
@@ -63,7 +65,7 @@ class AccountPage extends StatelessWidget {
                             iconColor: Colors.white,
                             iconSize: Dimensions.height10*5/2,
                             size: Dimensions.height10*5,),
-                          bigText: BigText(text: "1234 5678")),
+                          bigText: BigText(text: userController.userModel.phone)),
                       SizedBox(height: Dimensions.height20,),
                       //email
                       AccountWidget(
@@ -72,7 +74,7 @@ class AccountPage extends StatelessWidget {
                             iconColor: Colors.white,
                             iconSize: Dimensions.height10*5/2,
                             size: Dimensions.height10*5,),
-                          bigText: BigText(text: "xxxxx@gmail.com")),
+                          bigText: BigText(text: userController.userModel.email)),
                       SizedBox(height: Dimensions.height20,),
                       //address
                       AccountWidget(
@@ -128,7 +130,42 @@ class AccountPage extends StatelessWidget {
 
             ],
           ),
-        );
+        ):
+        CustomLoader()):
+        Container(child: Center(child:Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              width: double.maxFinite,
+              height: Dimensions.height20*8,
+              margin: EdgeInsets.only(left: Dimensions.width20,right: Dimensions.width20),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(Dimensions.radius20),
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage(
+                          "assets/image/signintocontinue.png"
+                      )
+                  )
+              ),
+            ),
+            GestureDetector(
+              onTap: (){
+                Get.toNamed(RouteHelper.getSignInPage());
+              },
+              child: Container(
+                width: double.maxFinite,
+                height: Dimensions.height20*5,
+                margin: EdgeInsets.only(left: Dimensions.width20,right: Dimensions.width20),
+                decoration: BoxDecoration(
+                  color: AppColors.mainColor,
+                    borderRadius: BorderRadius.circular(Dimensions.radius20),
+                ),
+                child: Center(child: BigText(text: "Sign in", color: Colors.white,),)
+              ),
+            )
+          ],
+        )));
       }),
     );
   }
