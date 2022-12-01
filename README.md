@@ -24,12 +24,29 @@ This page is from the home page where you can add items to your cart. Text about
 
 ![popular](https://user-images.githubusercontent.com/90837134/203030298-0c389ba1-85fb-4ed9-bfbf-64c30770d221.png)
 
+### Cart Page
+
 Place order on this page. You can also add or remove items from your shopping cart. You'll also see changes to the total price as you add or remove. This page is dynamic as it removes and adds items as the user clicks.
 
-### Cart Page
 ![shopcart](https://user-images.githubusercontent.com/90837134/203030755-3285b3a6-d472-489c-9b14-e5eec2639f8b.png)
 
-Place order on this page. You can also add or remove items from your shopping cart. You'll also see changes to the total price as you add or remove. This page is dynamic as it removes and adds items as the user clicks.
+### Hisory Page
+History Pages.Saved on the device itself. You can reorder the items you ordered.
+
+![圖片](https://user-images.githubusercontent.com/90837134/205107458-ef987532-96ab-4e82-9d42-cde48bad9c88.png)
+
+### Sign up Page
+Sign up with your auth. After registration, the information is submitted to the database and a token is generated for the user. This token is used for authentication.
+
+![圖片](https://user-images.githubusercontent.com/90837134/205106957-98006086-c97a-4125-9045-2d13146f269e.png)
+
+### Sign in Page
+Login with your registrated phone. Account information is matched against your credentials on the backend using a token.
+
+![圖片](https://user-images.githubusercontent.com/90837134/205107075-065e2d68-63b9-4772-92cc-bea9ec74f9a5.png)
+
+### Info Page
+![圖片](https://user-images.githubusercontent.com/90837134/205107595-09390a94-4324-4939-a236-e331908701b6.png)
 
 
 ## Part 1!
