@@ -1,10 +1,25 @@
-# fooddelivery_backend
-This is an E-Commerce app delivering food using flutter for iOS and Android.
+## Main features
 
-This is a shopping app with Laravel backend and Laravel admin panel
+- [x] Homepage (display popular products and recommended products)
+- [x] Shopping Cart (a real shopping cart where items can be added and removed dynamically)
+- [x] Local cart history page
+- [x] Server cart history page
+- [x] Login and register (register with mobile phone)
+- [x] Info page
+- [x] Popular Foods Page (view popular foods, add or remove items from cart)
+- [x] Recommended foods page (view recommended foods, add or remove from cart)
+- [x] Order more features (added features to help you order)
+- [x] Order more features (added features to help you order)
+- [x] Create new items (backend you can create new food items)
+- [x] Display user information and order in backend
+- [ ] Address page
+- [ ] Google Maps function 
+- [ ] Paypal payment 
 
+## State management
 
-E-commerce or shopping app includes the features
+This mainly based on the flutter Getx package. Use the Getx package to manage the state and routing of the application and also use Getx as an api client.
+
 
 ### Home Page
 
@@ -46,23 +61,9 @@ Login with your registrated phone. Account information is matched against your c
 ![圖片](https://user-images.githubusercontent.com/90837134/205107075-065e2d68-63b9-4772-92cc-bea9ec74f9a5.png)
 
 ### Info Page
+Your personal information is here. Here address could be updated.
+
 ![圖片](https://user-images.githubusercontent.com/90837134/205107595-09390a94-4324-4939-a236-e331908701b6.png)
 
 
-## Part 1!
 
-API Client, Repository and Controllers
-Build models, classes working with JSON, Map and List
-Build product controller, cart controller and data processing
-Responsive lay out
-
-## State management
-
-This e-commerce app is based on flutter Getx Package. We used Getx package to manage the state and routing of the app. We have also used Getx for api client. 
-
-Getx is a great package for managing your app states, routes and http client. It does more than that. If you are trying to build a complex mobile or web app using flutter, Getx would be your best choice. And it's also beginners friendly reactive state management app package.
-
-We used Getx for products display, maintaining the state of the shopping cart, profile page, google map and many other features of this e-commerce app or shopping app.
-
-## Backend
-Not yet done
