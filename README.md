@@ -56,7 +56,7 @@ Sign up with your auth. After registration, the information is submitted to the 
 ![圖片](https://user-images.githubusercontent.com/90837134/205106957-98006086-c97a-4125-9045-2d13146f269e.png)
 
 ### Sign in Page
-Login with your registrated phone. Account information is matched against your credentials on the backend using a token.
+Login with your registrated phone. Account information is matched against your credentials on the backend using a token
 
 ![圖片](https://user-images.githubusercontent.com/90837134/205107075-065e2d68-63b9-4772-92cc-bea9ec74f9a5.png)
 
