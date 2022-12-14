@@ -61,7 +61,7 @@ Login with your registrated phone. Account information is matched against your c
 ![圖片](https://user-images.githubusercontent.com/90837134/205107075-065e2d68-63b9-4772-92cc-bea9ec74f9a5.png)
 
 ### Info Page
-Your personal information is here. Here address could be updated.
+Your personal information is here. Here address could be updated
 
 ![圖片](https://user-images.githubusercontent.com/90837134/205107595-09390a94-4324-4939-a236-e331908701b6.png)
 
